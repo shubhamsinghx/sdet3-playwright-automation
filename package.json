@@ -11,6 +11,9 @@
     "test:debug": "npx playwright test --debug",
     "test:login": "npx playwright test tests/login/",
     "test:search": "npx playwright test tests/search/",
+    "test:dev": "ENV_FILE=.env.dev npx playwright test --project=chromium",
+    "test:stg": "ENV_FILE=.env.stg npx playwright test --project=chromium",
+    "test:qa": "ENV_FILE=.env.qa npx playwright test --project=chromium",
     "report": "npx playwright show-report",
     "clean": "rm -rf test-results playwright-report logs/*.log"
   },

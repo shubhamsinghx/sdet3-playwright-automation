@@ -1,7 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
+import path from 'path';
 
-dotenv.config();
+// Load environment-specific config: ENV_FILE=.env.qa npx playwright test
+dotenv.config({ path: path.resolve(process.cwd(), process.env.ENV_FILE || '.env') });
 
 const BASE_URL = process.env.BASE_URL || 'https://opensource-demo.orangehrmlive.com';
 const IS_CI = !!process.env.CI;
