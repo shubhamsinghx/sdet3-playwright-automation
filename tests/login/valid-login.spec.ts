@@ -12,4 +12,10 @@ test.describe('Login — Valid Credentials', () => {
     const loaded = await loginPage.isPageLoaded();
     expect(loaded).toBe(true);
   });
+
+  test('TC_LOGIN_002 — Login page title is OrangeHRM', async ({ loginPage }) => {
+    Logger.step(1, 'Verify page title');
+    const title = await loginPage.getPageTitle();
+    expect(title).toContain('OrangeHRM');
+  });
 });
