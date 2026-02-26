@@ -1,0 +1,33 @@
+{
+  "name": "sdet3-playwright-automation",
+  "version": "1.0.0",
+  "description": "UI Test Automation Framework for OrangeHRM using Playwright and TypeScript",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:login": "npx playwright test tests/login/",
+    "test:search": "npx playwright test tests/search/",
+    "report": "npx playwright show-report",
+    "clean": "rm -rf test-results playwright-report logs/*.log"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "typescript",
+    "orangehrm",
+    "sdet",
+    "page-object-model"
+  ],
+  "author": "Shubham Singh",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "typescript": "^5.7.0",
+    "dotenv": "^16.4.0",
+    "winston": "^3.17.0"
+  }
+}
