@@ -1,8 +1,3 @@
-# ──────────────────────────────────────────────────────────────────────
-# This is a reference copy of the CI/CD pipeline configuration.
-# The active workflow lives at .github/workflows/ui-tests.yml
-# ──────────────────────────────────────────────────────────────────────
-
 name: UI Tests — OrangeHRM (Playwright)
 
 on:
@@ -11,6 +6,10 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
 
 env:
   NODE_VERSION: '20'
